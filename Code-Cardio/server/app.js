@@ -50,16 +50,16 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-app.listen(42069, ()=> console.log('rugnging on port 42069'));
+const PORT = 3000;
+app.listen(PORT, ()=> console.log(`rugnging on port ${PORT}`));
+// // connection string opened up
+// var _server = new MongoClient(connectionString).GetServer();
 
-// connection string opened up
-var _server = new MongoClient(connectionString).GetServer();
+// var connectionString = "mongodb://localhost:8082";
 
-var connectionString = "mongodb://localhost:42069";
+// //take database name from connection string
+// var _databaseName = MongoUrl.Create(connectionString).DatabaseName;
+// var _server = MongoServer.Create(connectionString);
 
-//take database name from connection string
-var _databaseName = MongoUrl.Create(connectionString).DatabaseName;
-var _server = MongoServer.Create(connectionString);
-
-//and then get database by database name:
-_server.GetDatabase(_databaseName);
+// //and then get database by database name:
+// _server.GetDatabase(_databaseName);
